@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: Yekan;
+  src: url("../assets/fonts/Yekan.ttf");
+  font-weight: normal;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  direction: rtl;
+}
+
+body {
+  font-family: Yekan;
+  font-size: 1.5rem;
+}
+
+.logo__img {
+  max-width: 8rem;
+}
+
+.layout {
+  width: 150px;
+  height: 100vh;
+  background-color: #ffffff;
+  border-left: 0.1rem solid #dee2e6;
+}/*# sourceMappingURL=main.css.map */
