@@ -1,46 +1,16 @@
-import { useState } from "react";
-import SidebarArrow from "./SidebarArrow";
+import { useContext } from "react";
+import { SidebarContext } from "../context/SidebarContext";
 import SidebarLogo from "./SidebarLogo";
 const Sidebar = (): JSX.Element => {
-    const [open, setOpen] = useState<boolean>(false)
-    return (
-        <div className={`${open ? 'w-72' : 'w-20'}  relative h-screen duration-300 bg-[#1a1a27]`}>
-            {/* <SidebarArrow open={open} setOpen={setOpen} /> */}
-            <SidebarLogo open={open} setOpen={setOpen} />
-            <div className="overflow-auto">
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
-                <div className="text-indigo-700">HH</div>
+    const { isOpen, handleOpen } = useContext(SidebarContext)
 
+    return (
+        <div className={`${isOpen ? 'w-72' : 'w-20'} fixed top-0 bottom-0 h-screen duration-300 bg-[#1a1a27]`}>
+            <SidebarLogo open={isOpen} setOpen={handleOpen} />
+            <div className="overflow-auto h-full">
+                <div className="text-indigo-700">HH</div>
+                <div className="text-indigo-700">HH</div>
+                <div className="text-indigo-700">HH</div>
             </div>
         </div>
     )

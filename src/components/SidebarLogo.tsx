@@ -1,13 +1,12 @@
 import { SidebarToggleProps } from "../models/SidebarToggleProps"
 import SaipaLogoOpen from '../assets/images/saipa-image.png'
-import SaipaLogoClose from '../assets/images/saipa-logo.png'
 const SidebarLogo = ({ open, setOpen }: SidebarToggleProps): JSX.Element => {
     const handleOpen = (): void => {
         if (setOpen)
             setOpen(!open)
     }
     return (
-        <div className="flex justify-around items-center mt-10 bg-slate-800 pt-4 pb-4">
+        <div className={`flex ${open ? 'justify-around': 'justify-center'} items-center mt-10 bg-slate-800 pt-4 pb-4`}>
             <div className="flex justify-center items-center">
                 {open ? (
                     <img src={SaipaLogoOpen} className='w-36' />
