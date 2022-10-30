@@ -1,11 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @font-face {
   font-family: Yekan;
   src: url("../assets/fonts/Yekan.ttf");
   font-weight: normal;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 *,
 *::after,
 *::before {
@@ -26,6 +26,45 @@ body {
 
 .logo__img {
   max-width: 8rem;
+}
+
+.cardBox {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40rem;
+  height: 40rem;
+  background-color: #f1416c;
+  border-radius: 1rem;
+  margin-top: 10rem;
+}
+.cardBox__label {
+  color: white;
+  font-size: 2rem;
+}
+.cardBox__items {
+  position: absolute;
+  bottom: -6rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.cardBox__item {
+  margin: 1rem 4rem;
+  background-color: #ffc700;
+  border-radius: 0.5rem;
+  bottom: -6rem;
+  padding: 4rem;
+  color: white;
+  z-index: 100;
+}
+.cardBox__item:nth-child(2) {
+  margin: 1rem;
+  background-color: #19a3c5;
+  border-radius: 0.5rem;
+  bottom: -6rem;
+  color: white;
+  z-index: 100;
 }
 
 .layout {
