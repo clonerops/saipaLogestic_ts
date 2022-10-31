@@ -7,7 +7,7 @@ const Homepage = (): JSX.Element => {
     return (
         <div className="flex">
             <Sidebar />
-            <div className={`${isOpen ? 'mr-72  ': 'mr-20'} duration-300`}>
+            <div className={`${isOpen ? 'mr-96  ': 'mr-20'} duration-500`}>
                 <div>HomePage</div>
             </div>
         </div>
